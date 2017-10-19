@@ -8,7 +8,12 @@ $sql = "INSERT INTO questions VALUES(DEFAULT, '$_POST[korreoa]' , '$_POST[galder
 $ema = mysqli_query($esteka, $sql); 
 if (!$ema)
 {
-die('Errorea query-a gauzatzerakoan: '. mysqli_error($esteka));
-}
+echo("Errorea query-a gauzatzerakoan: ". mysqli_error($esteka));
 mysqli_close($esteka);
+echo ('<a href="../html/addQuestion.html">formulariora itzultzeko klikatu hemen</a>');
+}
+else{
+	mysqli_close($esteka);
+	echo ('<a href="showQuestions.php"> datubaseko datuak ikusteko klikatu hemen</a>');	
+}
 ?>
