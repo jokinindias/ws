@@ -48,8 +48,10 @@
             Egiaztatu
         </button>
         <button id= "botoiBorratu" type="button">
-            Borratu
-        </button><br/>
+			Borratu
+		</button>
+            
+        
         <label id="zuzenketa"></label>
         
        </form>
@@ -63,10 +65,10 @@
                 var zuzendu = document.getElementById("zuzenketa").innerHTML=""
             }
             buttonBor.addEventListener("click", botoiklikatu1)
-			
-			
 			var buttonEgiaz = document.getElementById("botoiEgiaztatu")
-            var botoiklikatu = function(){               
+            var botoiklikatu = function(){
+                
+                
                 var lehenZenb = Number(document.getElementById("textarea").value)
                 var e = document.getElementById("sel").value
                 

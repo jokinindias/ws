@@ -3,6 +3,7 @@
   <head>
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
 	<title>Quizzes</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel='stylesheet' type='text/css' href='http://uarribillaga.000webhostapp.com/Lab2/estiloak/style.css' />
 	<link rel='stylesheet' 
 		   type='text/css' 
@@ -14,9 +15,14 @@
 		   href='http://uarribillaga.000webhostapp.com/Lab2/estiloak/smartphone.css' />
   </head>
   <body>
+  <form>
+  </br>
+  <input id="botoiErregistratu" type="button" value="Erregistratu">
+  <input id="botoiLogin" type="button" value="LogIn">
+  <input id="botoiAtera" type="button" value="LogOut"></input></br></br>
   <div id='page-wrap'>
 	<header class='main' id='h1'>
-      <span class="right"><a href="http://localhost:1234/laborategiak/php/signUp.php">LogIn</a> </span>
+      <span class="right"><a href="/login">LogIn</a> </span>
       <span class="right" style="display:none;"><a href="/logout">LogOut</a> </span>
 	<h2>Quiz: crazy questions</h2>
     </header>
@@ -24,8 +30,7 @@
 		<span><a href='layout.html'>Home</a></span>
 		<span><a href='/quizzes'>Quizzes</a></span>
 		<span><a href='http://localhost:1234/laborategiak/html/credits.html'>Credits</a></span>
-		<span><a href= 'http://localhost:1234/laborategiak/html/addQuestion.html'>Galdera gehitu</a></span>
-		<span><a>Galderak ikusi<a/></span>
+		<span><a href= 'http://localhost:1234/laborategiak/php/addQuestion.php'>Galdera gehitu</a></span>
 	</nav>
     <section class="main" id="s1">
     
@@ -39,5 +44,29 @@
 		<a href='https://github.com'>Link GITHUB</a>
 	</footer>
 </div>
+</form>
+<script>
+$(document).ready(function(){
+        $("#botoiErregistratu").click(function(){
+		location.href="http://localhost:1234/laborategiak/php/signUp.php"
+		});
+		$("#botoiLogin").click(function(){
+		location.href="http://localhost:1234/laborategiak/php/logIn.php"
+		});
+		$("#botoiAtera").click(function(){
+		location.href="http://localhost:1234/laborategiak/php/logOut.php"
+		});
+        
+    });
+</script>
 </body>
 </html>
+<?php
+if(isset($_GET['id'])){
+echo('dena ondo');
+}
+else{
+echo('dena gaizki');
+}
+
+?>

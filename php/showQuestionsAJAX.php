@@ -1,7 +1,5 @@
 <?php
 //questions.xml erakusteko
-if(isset($_GET['id'])){
-	$id= $_GET['id'];
 	$xml = simplexml_load_file("../xml/questions.xml");
 	echo "<table border = '1'> \n";
 	echo "<tr><td>Enuntziatua</td><td>Zailtasuna</td><td>Gaia</td></tr> \n";
@@ -15,7 +13,4 @@ if(isset($_GET['id'])){
 			}
 		echo "<tr><td>" . $enuntziatua . "</td><td>" . $zailtasuna . "</td><td>" . $gaia . "</td></tr> \n";
 	}
-	
-	echo('<a href="layout.php?id='.$id.'"> HASIERAKO ORRIRA ITZULTZEKO HEMEN KLIKATU </a></br></br>');
-}
 ?>

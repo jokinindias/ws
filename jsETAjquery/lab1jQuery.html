@@ -56,33 +56,28 @@
        <script>
        $(document).ready(function(){
             $("#botoiEgiaztatu").click(function(){
-            });
-			
-			$("#botoiBorratu").click(function(){
-				$("textarea").val(' ');
-				$("#sel").prop('selectedIndex', 0);
-				$("#zuzenketa").text(' ')
-			});
-			
-			$("#botoiEgiaztatu").click(function(){
-				var e = $("#sel").val();
-				var z1= Number($("#textarea").val());
-				var z2= Number($("#textarea1").val());
-				var ema= $("#textarea2").val();
-				var x
-				if(e == "+")x=z1 + z2
-				if(e == "-")x=z1 -z2
-				if(e == "*")x=z1 *z2
-				if(e == "/")x=z1 /z2
-				console.log("ema:")
-				console.log(ema)
-				console.log("x")
-				console.log(x)
-				if(ema==x) $("#zuzenketa").text('ondo')
-				else $("#zuzenketa").text('gaizki')
-			});
-		});
-		</script>
-    </body>
+            
+});
+$("#botoiBorratu").click(function(){
+$("textarea").val(' ');
+$("#sel").prop('selectedIndex', 0);
+$("#zuzenketa").text(' ')
+});
+$("#botoiEgiaztatu").click(function(){
+var e = $("#sel").val();
+var z1= Number($("#textarea").val());
+var z2= Number($("#textarea1").val());
+var ema= $("#textarea2").val();
+var x
+if(e == "+")x=z1 + z2
+if(e == "-")x=z1 -z2
+if(e == "*")x=z1 *z2
+if(e == "/")x=z1 /z2
+if(ema==x) $("#zuzenketa").text('ondo')
+else $("#zuzenketa").text('gaizki')
+});
+});
+    </script>
+   </body>
 </html>
 
