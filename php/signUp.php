@@ -89,7 +89,7 @@ if(isset($_POST['korreoa'], $_POST['deitura'], $_POST['nick'], $_POST['pasahitza
 	$doc->loadXML(strstr($soapclient->response, '<'));
 	$mezua = $doc->getElementsByTagName('z');
 	if($mezua[0]->nodeValue=="BAI"){
-		$soapclient2 = new nusoap_client('http://localhost:1234/laborategiak/php/egiaztatuPasahitza.php?wsdl', true);
+		$soapclient2 = new nusoap_client('http://uarribillaga.000webhostapp.com/Lab6/php/egiaztatuPasahitza.php?wsdl', true);
 		$soapclient2->call('bilatu', array('x'=>$_POST['pasahitza']));
 		$doc2 = new DOMDocument();
 		$doc2->loadXML(strstr($soapclient2->response, '<'));
@@ -138,7 +138,6 @@ if(isset($_POST['korreoa'], $_POST['deitura'], $_POST['nick'], $_POST['pasahitza
 		}
 	}
 	else {
-		echo($erantzuna=="BAI");
 		echo('<span style="color: red;">KORREO HAU DUEN PERTSONA EZ DAGO WEB SISTEMAN APUNTATURIK</span></br>');
 	} 
 	
